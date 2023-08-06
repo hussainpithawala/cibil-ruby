@@ -1,0 +1,26 @@
+module Cibil
+  module TUDF
+    module Generator
+      module Header
+        class Field
+          attr_accessor field_length: string
+          attr_accessor field_name: string
+          attr_accessor field_value: string
+          attr_accessor pad_character: string
+
+          def emit: -> string
+        end
+
+        class Row
+          attr_accessor member_id: string
+          attr_accessor member_name: string
+          attr_accessor member_password: string
+          attr_accessor cycle_identification: string
+          attr_accessor last_day_of_month: string
+
+          def emit: -> string
+        end
+      end
+    end
+  end
+end
